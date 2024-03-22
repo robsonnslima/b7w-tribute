@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tributo aos Mamonas Assassinas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto Slab", serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        nav {
+            padding: 20px;
+        }
+
+        footer {
+            padding: 20px 0 40px;
+        }
+
+        header {
+            padding: 20px 20px 0;
+        }
+
+        main {
+            padding: 0 80px;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.8em;
+            margin: 0;
+            margin-bottom: 20px;
+            text-decoration: underline;
+            color: #555;
+        }
+
+        p {
+            color: #555;
+        }
+
+        main section {
+            padding: 20px 0;
+        }
+
+        .menu {
+            width: 320px;
+            margin: 0 auto;
+        }
+
+        nav {
+            padding: 0 20px 40px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            font-weight: bold;
+            color: #d6ba11;
+        }
+
+        img {
+            width: 800px;
+            max-width: 100%;
+            display: flex;
+            margin: 0 auto;
+        }
+        /* ================ FOTO POLAROID ================ */
+        .polaroid {
+            display: inline-block;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            margin: 0 20px 20px;
+        }
+
+        .polaroid img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(100%); /* Inicia preto */
+            transition: filter 0.3s ease-in-out; /* Transição */
+        }
+
+        .polaroid:hover img {
+            filter: none; /* Retorna cor original */
+        }
+
+        .polaroid .caneta {
+            font-size: 26px;
+            font-family: "Permanent Marker", cursive;
+            color: #555;
+            text-align: center;
+            margin-top: 15px;
+        }
+        /* ================ RODAPÉ ================ */
+        footer {
+            margin-top: auto;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer span {
+            color: #d6ba11;
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+
+        footer a:visited {
+            color: #555;
+        }
+
+        footer a:hover {
+            color: #d6ba11;
+        }
+        /* ================ DISCOGRAFIA ================ */
+        .discos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .disco {
+            text-align: center;
+        }
+
+        .disco img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .disco img:hover {
+            transform: scale(1.05);
+        }
+
+        .disco h3 {
+            margin: 10px 0;
+        }
+
+        .disco p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        /* ================ FOTOS ================ */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .photo {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo:hover {
+            transform: scale(1.05);
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .photo:hover .caption {
+            opacity: 1;
+        }
+        /* ================ MOBILE ================ */
+        @media (max-width: 768px) {
+            main {
+                padding: 0 40px;
+            }
+        }
+        /* ================ PLAYER ================ */
+        audio {
+            display: none;
+        }
+
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Mamonas Assassinas</h1>
+        </header>
+        
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#discografia">Discografia</a></li>
+                    <li><a href="#fotos">Fotos</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="polaroid">
+            <img src="assets/images/banda.png" alt="Integrantes do Mamonas Assassinas">
+            <div class="caneta">Integrantes dos Mamonas Assassinas</div>
+        </div>
+
+        <main>
+            <section id="sobre">
+                <h2>História da Banda</h2>
+                <p>Os Mamonas Assassinas foram uma banda brasileira de rock cômico formada em Guarulhos, São Paulo, em meados da década de 1990. Composta por cinco membros talentosos e carismáticos - Dinho (vocal), Bento Hinoto (guitarra), Júlio Rasec (teclado), Samuel Reoli (baixo) e Sérgio Reoli (bateria) - a banda rapidamente se destacou por sua música cativante, letras humorísticas e performances enérgicas.</p>
+                <p>O surgimento dos Mamonas Assassinas aconteceu em um momento de efervescência cultural no Brasil. No início dos anos 90, o país estava passando por uma fase de transição política e social, e a música brasileira estava buscando novas expressões. Foi nesse cenário que os Mamonas surgiram, trazendo uma mistura única de rock, funk, música popular brasileira e uma boa dose de humor.</p>
+                <p>Em 1995, lançaram seu álbum de estreia autointitulado "Mamonas Assassinas". O álbum foi um sucesso instantâneo, vendendo milhões de cópias em todo o Brasil. Canções como "Pelados em Santos", "Vira-Vira", "Robocop Gay" e "Mundo Animal" se tornaram hits instantâneos, conquistando fãs de todas as idades.</p>
+                <p>O sucesso dos Mamonas Assassinas não se limitou apenas à música. Eles também se destacaram por suas performances ao vivo, que eram verdadeiros espetáculos de energia e diversão. Com trajes excêntricos, coreografias engraçadas e interações hilárias com o público, os shows dos Mamonas eram uma experiência inesquecível para quem teve a oportunidade de presenciá-los.</p>
+                <p>No entanto, a ascensão meteórica da banda foi interrompida tragicamente em 1996. Em março daquele ano, o avião que transportava os membros da banda de volta de um show em Brasília chocou-se contra a Serra da Cantareira, próximo a São Paulo, resultando na morte de todos a bordo. O Brasil ficou chocado e entristecido pela perda prematura de uma das bandas mais promissoras e queridas do país.</p>
+                <p>Apesar de sua carreira curta, o legado dos Mamonas Assassinas permanece vivo até hoje. Sua música continua sendo celebrada e suas performances lendárias são lembradas com carinho por fãs de todas as gerações. Os Mamonas não apenas marcaram a história da música brasileira com sua irreverência e talento, mas também deixaram uma marca indelével na cultura popular do país.</p>
+            </section>
+            
+            <section id="discografia">
+                <h2>Discografia</h2>
+                <div class="discos-container">
+                    <div class="disco">
+                        <a href="https://www.letras.mus.br/mamonas-assassinas/discografia/mamonas-assassinas-1995/">
+                            <img src="assets/images/disc_mamonas-assassinas.png" alt="Mamonas Assassinas">
+                        </a>
+                        <h3>Mamonas Assassinas</h3>
+                        <p>Lançamento: 1995</p>
+                        <p>14 músicas</p>
+                    </div>
+
+                    <div class="disco">
+                        <a href="https://www.letras.mus.br/mamonas-assassinas/discografia/atencao-creuzebek-a-baixaria-continua-1998/">
+                            <img src="assets/images/disc_atencao-creuzebeck-a-baixaria-continua.png" alt="Atenção, Creuzebek: A Baixaria Continua!">
+                        </a>
+                        <h3>Atenção, Creuzebek:<br>A Baixaria Continua!</h3>
+                        <p>Lançamento: 1998</p>
+                        <p>12 músicas</p>
+                    </div>
+
+                    <div class="disco">
+                        <a href="https://www.letras.mus.br/mamonas-assassinas/discografia/mamonas-ao-vivo-2006/">
+                            <img src="assets/images/disc_mamonas-ao-vivo.png" alt="Mamonas (Ao Vivo)">
+                        </a>
+                        <h3>Mamonas (Ao Vivo)</h3>
+                        <p>Lançamento: 2006</p>
+                        <p>16 músicas</p>
+                    </div>
+
+                    <div class="disco">
+                        <a href="https://www.letras.mus.br/mamonas-assassinas/discografia/1-16-hits-2009/">
+                            <img src="assets/images/disc_one-16-hits.png" alt="One: 16 Hits">
+                        </a>
+                        <h3>One: 16 Hits</h3>
+                        <p>Lançamento: 2009</p>
+                        <p>16 músicas</p>
+                    </div>
+
+                    <div class="disco">
+                        <a href="https://www.letras.mus.br/mamonas-assassinas/discografia/pelados-em-santos-2014/">
+                            <img src="assets/images/disc_pelados-em-santos.png" alt="Pelados Em Santos">
+                        </a>
+                        <h3>Pelados Em Santos</h3>
+                        <p>Lançamento: 2014</p>
+                        <p>16 músicas</p>
+                    </div>
+
+                    <div class="disco">
+                        <a href="https://www.letras.mus.br/mamonas-assassinas/discografia/mamonas-assassinas-o-filme-2023/">
+                            <img src="assets/images/disc_mamonas-assassinas-o-filme.png" alt="Mamonas Assassinas - O Filme">
+                        </a>
+                        <h3>Mamonas Assassinas<br>O Filme</h3>
+                        <p>Lançamento: 2023</p>
+                        <p>13 músicas</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="fotos">
+                <h2>Fotos</h2>
+                <div class="gallery">
+                    <div class="photo">
+                        <img src="assets/images/pic_1.png" alt="Foto 1">
+                    </div>
+                    <div class="photo">
+                        <img src="assets/images/pic_2.png" alt="Foto 2">
+                    </div>
+                    <div class="photo">
+                        <img src="assets/images/pic_3.png" alt="Foto 3">
+                    </div>
+                    <div class="photo">
+                        <img src="assets/images/pic_4.png" alt="Foto 3">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Feito com <span>❤</span> por um <a href="https://github.com/robsonnslima"><strong>fã</strong></a>.</p>
+        </footer>
+    </div>
+
+    <audio controls autoplay loop>
+        <source src="assets/music/piano.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+</body>
+</html>
